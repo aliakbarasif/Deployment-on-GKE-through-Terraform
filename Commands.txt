@@ -1,0 +1,41 @@
+terraform init
+terraform plan
+terraform apply
+terraform destroy
+
+helm search repo nginx
+helm search repo cert-manager
+helm search repo adminer
+helm search hub adminer
+
+helm pull bitnami/nginx-ingress-controller
+helm pull jetstack/cert-manager
+
+helm repo list
+
+***************Deploy nginx ingress controller*************************
+https://artifacthub.io/packages/helm/bitnami/nginx-ingress-controller
+
+$ helm repo add bitnami https://charts.bitnami.com/bitnami
+$ helm repo update
+$ helm install my-release bitnami/nginx-ingress-controller
+$ helm delete my-release
+************************************************************************
+
+***************Deploy cert-manager*************************************
+https://artifacthub.io/packages/helm/cert-manager/cert-manager
+
+$ helm repo add jetstack https://charts.jetstack.io
+$ helm repo update
+$ helm install --name my-release --namespace cert-manager jetstack/cert-manager
+$ helm delete my-release
+************************************************************************
+
+***************Deploy adminer*************************************
+https://artifacthub.io/packages/helm/cetic/adminer
+
+$ helm repo add cetic https://cetic.github.io/helm-charts
+$ helm repo update
+$ helm install --name my-release cetic/adminer
+$ helm delete my-release
+************************************************************************

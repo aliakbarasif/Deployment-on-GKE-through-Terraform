@@ -1,0 +1,6 @@
+1-Create Bucket
+2-Create a preemptive cluster
+3-Create a static compute address
+4-Install Nginx ingress controller
+5-Install cert-manager
+6-Deploy adminer
